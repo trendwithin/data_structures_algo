@@ -2,9 +2,9 @@ require 'benchmark'
 include Benchmark
 require_relative 'merge_sort'
 
-array = (1..100000).map { rand }
-array2 = (1..1000000).to_a.shuffle
-array3 = (1..1000000).to_a
+array  = (1..1_000_000).map { rand }
+array2 = (1..1_000_000).to_a.shuffle
+array3 = (1..1_000_000).to_a
 n = 1
 
 Benchmark.benchmark(CAPTION, 4, FORMAT, "total: " "avg:") do |x|
