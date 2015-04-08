@@ -33,7 +33,6 @@ describe ('Stack', function(){
     var n = stacked.node(2);
     stacked.push(n);
     expect(stacked).to.have.property('length').that.equals(2);
-    console.log(n.next.val);
     expect(n.next.val).to.eql(1);
   })
 
