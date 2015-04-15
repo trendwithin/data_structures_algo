@@ -5,14 +5,14 @@ require 'set'
 class TestHashTable < MiniTest::Test
 
   def setup
-    @ht = HashTable.new(260)
+    @ht = HashTable.new(2600)
     @word = "ant"
     @words = %w{ ant chocolate xylaphone you zebra banana pear cat}
     @wordlist ||= Set.new(open('/usr/share/dict/words').readlines.map(&:strip))
   end
 
   def test_size_of_table
-    expected = 260;
+    expected = 2600;
     assert_equal expected, @ht.bucketcheck
   end
 
@@ -34,11 +34,8 @@ class TestHashTable < MiniTest::Test
 
   def test_hash_hardhat_zone
     expected = 260
-    # arr = @ht.hash_hardhat_zone(@word)
     arr = @ht.hash_hardhat_zone()
     assert_instance_of HashTable::Node, arr[0]
-    # assert_equal word, arr[0].word
-    # assert_equal nil, arr[0].next
     assert_equal expected, arr.size
   end
 

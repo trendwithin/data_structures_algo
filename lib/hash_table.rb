@@ -30,7 +30,7 @@ class HashTable
   end
 
   def get(word)
-    return "Invalid Input, Strings Only" unless word.instance_of? String
+    raise "Invalid Input, Strings Only" unless word.instance_of? String
     sum_of_word(word)
     node = @hash_table[which_bucket]
     until node.nil?
@@ -40,7 +40,7 @@ class HashTable
   end
 
   def get_reversed(word)
-    return "Invalid Input, Strings Only" unless word.instance_of? String
+    raise "Invalid Input, Strings Only" unless word.instance_of? String
     sum_of_word(word)
     node = @hash_table[which_bucket]
     until node.nil?
