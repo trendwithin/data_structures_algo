@@ -13,7 +13,7 @@ class TestOddlyEven < Minitest::Test
 
   def test_list_with_1_item
     ll= Node.new('A')
-    new_lists = OddlyEven.seperate_odds_from_evens(ll)
+    new_lists = OddlyEven.separate_odds_from_evens(ll)
     odds = new_lists[0]
     evens = new_lists[1]
     assert_equal 'A', odds.val
@@ -21,7 +21,7 @@ class TestOddlyEven < Minitest::Test
   end
 
   def test_separate_linked_list_into_odd_even_positions
-    new_lists = OddlyEven.seperate_odds_from_evens(@ll)
+    new_lists = OddlyEven.separate_odds_from_evens(@ll)
     odds = new_lists[0]
     evens = new_lists[1]
 

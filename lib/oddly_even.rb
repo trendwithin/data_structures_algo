@@ -6,7 +6,7 @@ module OddlyEven
       @ll_evens = nil
     end
 
-    def seperate_odds_from_evens ll
+    def separate_odds_from_evens ll
       return nil if ll.nil?
       return [ll] if ll.next.nil?
       until ll.nil?
